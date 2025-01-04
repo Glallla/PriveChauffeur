@@ -7,7 +7,7 @@ Deze repository bevat een eenvoudige professionele one-page website voor een pri
 
 ## Preview van de website
 De website bevat:
-- Een professionele header en introductie.
+- Een professionele header met een afbeelding van een luxe auto.
 - Beschrijving van de aangeboden diensten.
 - Een knop om direct contact op te nemen via WhatsApp.
 - Een footer met copyright-informatie.
@@ -15,7 +15,7 @@ De website bevat:
 ---
 
 ## HTML Code voor de Website
-Hier is de HTML-code die je kunt gebruiken:
+Hier is de bijgewerkte HTML-code die je kunt gebruiken:
 
 ```html
 <!DOCTYPE html>
@@ -35,18 +35,34 @@ Hier is de HTML-code die je kunt gebruiken:
             line-height: 1.6;
         }
         header {
-            background-color: #2c3e50;
-            color: #fff;
-            padding: 20px 0;
+            position: relative;
             text-align: center;
+            color: #fff;
+        }
+        header img {
+            width: 100%;
+            height: auto;
+            opacity: 0.8;
         }
         header h1 {
-            margin: 0;
+            position: absolute;
+            top: 30%;
+            left: 50%;
+            transform: translate(-50%, -50%);
             font-size: 2.5rem;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 10px 20px;
+            border-radius: 10px;
         }
         header p {
+            position: absolute;
+            top: 45%;
+            left: 50%;
+            transform: translate(-50%, -50%);
             font-size: 1.2rem;
-            margin: 5px 0 0;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 5px 15px;
+            border-radius: 10px;
         }
         section {
             max-width: 800px;
@@ -82,9 +98,6 @@ Hier is de HTML-code die je kunt gebruiken:
             padding: 10px 0;
             background-color: #2c3e50;
             color: #fff;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
         }
         footer p {
             margin: 0;
@@ -94,6 +107,7 @@ Hier is de HTML-code die je kunt gebruiken:
 </head>
 <body>
     <header>
+        <img src="https://via.placeholder.com/1920x500" alt="Luxe auto">
         <h1>Privéchauffeur Beschikbaar</h1>
         <p>Betrouwbaar, representatief en professioneel vervoer</p>
     </header>
