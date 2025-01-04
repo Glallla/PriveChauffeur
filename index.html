@@ -13,14 +13,20 @@
             color: #333;
         }
         header {
-            background-color: #2a3d66;
+            background-image: url('jouw-afbeelding-auto.jpg'); /* Vervang door jouw afbeelding */
+            background-size: cover;
             color: white;
-            padding: 20px;
             text-align: center;
+            padding: 100px 0;
         }
-        h1 {
+        header h1 {
             margin: 0;
-            font-size: 36px;
+            font-size: 48px;
+            font-weight: bold;
+        }
+        header p {
+            font-size: 20px;
+            margin-top: 10px;
         }
         section {
             padding: 40px;
@@ -52,20 +58,29 @@
             width: 100%;
             bottom: 0;
         }
+        .service-section {
+            background-color: #fff;
+            padding: 40px;
+            margin: 20px 0;
+        }
     </style>
 </head>
 <body>
 
 <header>
     <h1>Privé Chauffeur Dienst</h1>
-    <p>Voor een luxe en veilige rit, wanneer je het nodig hebt.</p>
+    <p>Betrouwbaar, comfortabel en veilig vervoer op maat</p>
 </header>
 
-<section>
+<section class="service-section">
     <h2>Onze Diensten</h2>
-    <p class="service-description">Ik bied comfortabele, professionele en betrouwbare ritten voor zowel zakelijke als privégebruik. Of het nu gaat om luchthavenvervoer, stadsritten of speciale gelegenheden, je kunt rekenen op een veilige en ontspannen ervaring.</p>
-
+    <p class="service-description">Wij bieden luxe vervoer voor zowel zakelijke als privéritten. Van luchthavenvervoer tot transport voor speciale gelegenheden, wij zorgen ervoor dat je in stijl aankomt.</p>
     <a href="https://wa.me/31612345678" class="whatsapp-btn" target="_blank">Neem contact op via WhatsApp</a>
+</section>
+
+<section class="service-section">
+    <h2>Waarom Kiezen Voor Ons?</h2>
+    <p class="service-description">Onze chauffeurs zijn ervaren, professioneel en garanderen een veilige en comfortabele rit. Wij bieden op maat gemaakte oplossingen voor jouw behoeften.</p>
 </section>
 
 <footer>
