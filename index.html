@@ -13,11 +13,12 @@
             color: #333;
         }
         header {
-            background-image: url('jouw-afbeelding-auto.jpg'); /* Vervang door jouw afbeelding */
+            background-image: url('auto-header.jpg'); /* Vervang door jouw afbeelding */
             background-size: cover;
+            background-position: center;
             color: white;
             text-align: center;
-            padding: 100px 0;
+            padding: 120px 0;
         }
         header h1 {
             margin: 0;
@@ -49,6 +50,22 @@
         .whatsapp-btn:hover {
             background-color: #128C7E;
         }
+        .service-section {
+            background-color: #fff;
+            padding: 40px;
+            margin: 20px 0;
+        }
+        .car-images {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 40px;
+        }
+        .car-images img {
+            width: 300px;
+            height: auto;
+            border-radius: 10px;
+        }
         footer {
             background-color: #2a3d66;
             color: white;
@@ -57,11 +74,6 @@
             position: fixed;
             width: 100%;
             bottom: 0;
-        }
-        .service-section {
-            background-color: #fff;
-            padding: 40px;
-            margin: 20px 0;
         }
     </style>
 </head>
@@ -79,8 +91,18 @@
 </section>
 
 <section class="service-section">
+    <h2>Onze Voertuigen</h2>
+    <p class="service-description">Onze vloot bestaat uit luxe voertuigen die zijn uitgerust voor maximaal comfort en veiligheid tijdens jouw rit. Bekijk een paar van onze topmodellen hieronder.</p>
+    <div class="car-images">
+        <img src="auto1.jpg" alt="Luxe Auto 1"> <!-- Vervang door jouw afbeelding -->
+        <img src="auto2.jpg" alt="Luxe Auto 2"> <!-- Vervang door jouw afbeelding -->
+        <img src="auto3.jpg" alt="Luxe Auto 3"> <!-- Vervang door jouw afbeelding -->
+    </div>
+</section>
+
+<section class="service-section">
     <h2>Waarom Kiezen Voor Ons?</h2>
-    <p class="service-description">Onze chauffeurs zijn ervaren, professioneel en garanderen een veilige en comfortabele rit. Wij bieden op maat gemaakte oplossingen voor jouw behoeften.</p>
+    <p class="service-description">Onze chauffeurs zijn ervaren, professioneel en garanderen een veilige en comfortabele rit. Wij bieden op maat gemaakte oplossingen voor jouw behoeften. Wij zorgen ervoor dat je ontspannen en op tijd op je bestemming aankomt.</p>
 </section>
 
 <footer>
