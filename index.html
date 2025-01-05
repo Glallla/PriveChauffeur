@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Privé Chauffeur Dienst</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOM9mZ9Bp2p6z5s7M6F9p1F4Kp4bYf4h6W6Q7g7T" crossorigin="anonymous">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -43,6 +44,24 @@
         header p {
             font-size: 20px;
             margin-top: 10px;
+        }
+        nav {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: sticky;
+            top: 0;
+            z-index: 999;
+        }
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        nav a:hover {
+            text-decoration: underline;
         }
         section {
             padding: 40px;
@@ -89,6 +108,14 @@
             padding: 20px;
             text-align: center;
         }
+        footer a {
+            color: white;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
         #google_translate_element {
             margin: 20px;
         }
@@ -103,23 +130,43 @@
 <body>
 
 <header>
+    <nav>
+        <a href="#services">Diensten</a>
+        <a href="#contact">Contact</a>
+    </nav>
     <h1>Privé Chauffeur Dienst</h1>
     <p>Betrouwbaar, comfortabel en veilig vervoer op maat</p>
 </header>
 
-<section class="service-section">
+<section id="services" class="service-section">
     <h2>Luxe en Comfortabel Vervoer voor Elke Gelegenheid</h2>
-    <p class="service-description">Of je nu een zakelijke vergadering hebt, naar een speciale gelegenheid reist of gewoon van punt A naar B wilt komen, wij bieden op maat gemaakte chauffeurdiensten die aan al je wensen voldoen.</p>
+    <p class="service-description">Of je nu een zakelijke vergadering hebt, naar een speciale gelegenheid reist of gewoon van punt A naar B wilt komen, wij bieden op maat gemaakte chauffeurdiensten aan.</p>
     <a href="https://wa.me/31657951523" class="whatsapp-btn" target="_blank">Neem contact op via WhatsApp</a>
 </section>
 
 <section class="service-section">
     <h2>Boek Vandaag Nog!</h2>
-    <p class="service-description">Onze chauffeurs zijn ervaren, professioneel en garanderen een veilige en comfortabele rit. Wij bieden op maat gemaakte oplossingen voor jouw behoeften. Wil je je laten rijden naar een zakelijke afspraak, een avondje uit of een andere gelegenheid? Wij staan voor je klaar.</p>
+    <p class="service-description">Onze chauffeurs zijn ervaren, professioneel en garanderen een veilige en comfortabele rit. Wij bieden op maat gemaakte oplossingen voor jouw behoeften.</p>
+</section>
+
+<section id="contact" class="service-section">
+    <h2>Contact</h2>
+    <p class="service-description">Neem contact met ons op voor meer informatie of om een boeking te maken.</p>
+    <form>
+        <label for="name">Naam:</label><br>
+        <input type="text" id="name" name="name"><br>
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email"><br>
+        <label for="message">Bericht:</label><br>
+        <textarea id="message" name="message"></textarea><br>
+        <input type="submit" value="Verzenden">
+    </form>
 </section>
 
 <footer>
     <p>© 2025 Privé Chauffeur Dienst</p>
+    <a href="#services">Diensten</a>
+    <a href="#contact">Contact</a>
 </footer>
 
 <div id="google_translate_element"></div>
