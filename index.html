@@ -96,22 +96,32 @@
 <header>
     <h1>Privé Chauffeur Dienst</h1>
     <p>Betrouwbaar, comfortabel en veilig vervoer op maat</p>
+    <button id="languageToggle" onclick="changeLanguage()">EN</button>
 </header>
 
 <section class="service-section">
     <h2>Luxe en Comfortabel Vervoer voor Elke Gelegenheid</h2>
-    <p class="service-description">Of je nu een zakelijke vergadering hebt, naar een speciale gelegenheid reist of gewoon van punt A naar B wilt komen, wij bieden op maat gemaakte chauffeurdiensten die voldoen aan jouw behoeften. Onze voertuigen zijn uitgerust voor ultiem comfort en luxe, zodat je reis altijd een aangename ervaring is.</p>
+    <p class="service-description">Of je nu een zakelijke vergadering hebt, naar een speciale gelegenheid reist of gewoon van punt A naar B wilt komen, wij bieden op maat gemaakte chauffeurdiensten di[...]
     <a href="https://wa.me/31657951523" class="whatsapp-btn" target="_blank">Neem contact op via WhatsApp</a>
 </section>
 
 <section class="service-section">
     <h2>Boek Vandaag Nog!</h2>
-    <p class="service-description">Onze chauffeurs zijn ervaren, professioneel en garanderen een veilige en comfortabele rit. Wij bieden op maat gemaakte oplossingen voor jouw behoeften. Wil je jouw rit snel regelen? Stuur ons een bericht via WhatsApp!</p>
+    <p class="service-description">Onze chauffeurs zijn ervaren, professioneel en garanderen een veilige en comfortabele rit. Wij bieden op maat gemaakte oplossingen voor jouw behoeften. Wil je jouw r[...]
 </section>
 
 <footer>
     <p>© 2025 Privé Chauffeur Dienst</p>
 </footer>
+
+<script>
+    function changeLanguage() {
+        document.querySelector('h1').innerText = 'Private Chauffeur Service';
+        document.querySelector('p').innerText = 'Reliable, comfortable and safe transportation';
+        document.querySelectorAll('.service-description')[0].innerText = 'Whether you have a business meeting, traveling to a special occasion, or just want to get from point A to B, we provide customized chauffeur services.';
+        document.querySelectorAll('.service-description')[1].innerText = 'Our drivers are experienced, professional, and guarantee a safe and comfortable ride. We offer customized solutions for your needs.';
+    }
+</script>
 
 </body>
 </html>
