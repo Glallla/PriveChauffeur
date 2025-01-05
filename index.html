@@ -12,6 +12,7 @@
             padding: 0;
             background-color: #f4f4f9;
             color: #333;
+            line-height: 1.6;
         }
         header {
             background-image: url('https://github.com/Glallla/PriveChauffeur/raw/main/71267eb4-4a24-43b9-811d-075e7bc89eff.webp');
@@ -19,7 +20,7 @@
             background-position: center;
             color: white;
             text-align: center;
-            padding: 140px 20px;
+            padding: 100px 20px;
             position: relative;
         }
         header::after {
@@ -59,12 +60,13 @@
             margin: 0 15px;
             text-decoration: none;
             font-size: 18px;
+            transition: color 0.3s;
         }
         nav a:hover {
-            text-decoration: underline;
+            color: #25D366;
         }
         section {
-            padding: 40px;
+            padding: 40px 20px;
             text-align: center;
         }
         .service-description {
@@ -80,6 +82,7 @@
             border-radius: 5px;
             display: inline-block;
             margin-top: 20px;
+            transition: background-color 0.3s;
         }
         .whatsapp-btn:hover {
             background-color: #128C7E;
@@ -89,6 +92,7 @@
             padding: 40px;
             margin: 20px 0;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
         }
         .feature-section {
             background-color: #eef2f7;
@@ -176,11 +180,11 @@
     <p class="service-description">Neem contact met ons op voor meer informatie of om een boeking te maken.</p>
     <form>
         <label for="name">Naam:</label><br>
-        <input type="text" id="name" name="name"><br>
+        <input type="text" id="name" name="name" required><br>
         <label for="email">Email:</label><br>
-        <input type="email" id="email" name="email"><br>
+        <input type="email" id="email" name="email" required><br>
         <label for="message">Bericht:</label><br>
-        <textarea id="message" name="message"></textarea><br>
+        <textarea id="message" name="message" required></textarea><br>
         <input type="submit" value="Verzenden">
     </form>
 </section>
