@@ -103,6 +103,20 @@
             margin-bottom: 10px;
             font-size: 18px;
         }
+        .faq-section {
+            background-color: #fff;
+            padding: 40px;
+            margin: 20px 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .faq-item {
+            text-align: left;
+            margin-bottom: 20px;
+        }
+        .faq-item h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
         footer {
             background-color: #2a3d66;
             color: white;
@@ -119,6 +133,31 @@
         }
         #google_translate_element {
             margin: 20px;
+        }
+        .carousel {
+            display: flex;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            gap: 10px;
+            padding: 20px;
+        }
+        .carousel img {
+            scroll-snap-align: center;
+            width: 300px;
+            height: 200px;
+            border-radius: 10px;
+            object-fit: cover;
+        }
+        .contact-info {
+            text-align: left;
+            margin-top: 20px;
+        }
+        .contact-info p {
+            margin: 10px 0;
+            font-size: 16px;
+        }
+        .contact-info i {
+            margin-right: 10px;
         }
     </style>
     <script type="text/javascript">
@@ -166,6 +205,27 @@
     </blockquote>
 </section>
 
+<section id="gallery" class="service-section">
+    <h2>Onze Voertuigen</h2>
+    <div class="carousel">
+        <img src="https://via.placeholder.com/300x200" alt="Luxe voertuig 1">
+        <img src="https://via.placeholder.com/300x200" alt="Luxe voertuig 2">
+        <img src="https://via.placeholder.com/300x200" alt="Luxe voertuig 3">
+    </div>
+</section>
+
+<section id="faq" class="faq-section">
+    <h2>Veelgestelde Vragen</h2>
+    <div class="faq-item">
+        <h3>Hoe kan ik een chauffeur boeken?</h3>
+        <p>U kunt eenvoudig contact met ons opnemen via WhatsApp of ons contactformulier invullen.</p>
+    </div>
+    <div class="faq-item">
+        <h3>Welke regio's dekt uw service?</h3>
+        <p>Wij bieden onze diensten aan in Breda en omliggende regio's, inclusief langeafstandsritten.</p>
+    </div>
+</section>
+
 <section id="location" class="service-section">
     <h2>Locatie</h2>
     <p class="service-description">Ons kantoor is gevestigd in Breda. Wij zijn beschikbaar voor ritten in de hele regio en daarbuiten. Neem contact met ons op voor meer informatie over onze diensten en beschikbaarheid.</p>
@@ -183,6 +243,11 @@
         <textarea id="message" name="message"></textarea><br>
         <input type="submit" value="Verzenden">
     </form>
+    <div class="contact-info">
+        <p><i class="fas fa-phone"></i> +31 6 57951523</p>
+        <p><i class="fas fa-envelope"></i> info@privechauffeur.nl</p>
+        <p><i class="fas fa-map-marker-alt"></i> Breda, Nederland</p>
+    </div>
 </section>
 
 <section class="feature-section">
@@ -198,13 +263,4 @@
 <footer>
     <p>© 2025 Privé Chauffeur Dienst</p>
     <a href="#about">Over Ons</a>
-    <a href="#services">Diensten</a>
-    <a href="#testimonials">Getuigenissen</a>
-    <a href="#contact">Contact</a>
-    <a href="#location">Locatie</a>
-</footer>
-
-<div id="google_translate_element"></div>
-
-</body>
-</html>
+   
