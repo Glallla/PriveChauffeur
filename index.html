@@ -147,6 +147,43 @@
         .contact-form input[type="submit"]:hover {
             background-color: #1a2d50;
         }
+        .hero {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding: 20px;
+        }
+        .hero h2 {
+            margin-bottom: 10px;
+            font-size: 30px;
+        }
+        .hero p {
+            font-size: 18px;
+            max-width: 600px;
+        }
+        .testimonial {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin: 20px;
+            max-width: 500px;
+            display: inline-block;
+            text-align: left;
+        }
+        .testimonial p {
+            font-style: italic;
+        }
+        .testimonial footer {
+            font-weight: bold;
+            text-align: right;
+        }
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+        }
     </style>
 </head>
 <body>
@@ -170,21 +207,38 @@
 
 <section id="services" class="service-section">
     <h2>Luxe en Comfortabel Vervoer voor Elke Gelegenheid</h2>
-    <p class="service-description">Of je nu een zakelijke vergadering hebt, naar een speciale gelegenheid reist of gewoon van punt A naar B wilt komen, wij bieden op maat gemaakte chauffeurdiensten aan.</p>
+    <div class="service-grid">
+        <div>
+            <h3><i class="fas fa-briefcase"></i> Zakelijke Vervoer</h3>
+            <p>Professionele chauffeurs voor al uw zakelijke afspraken.</p>
+        </div>
+        <div>
+            <h3><i class="fas fa-wedding"></i> Bruiloften</h3>
+            <p>Speciale arrangementen voor uw mooiste dag.</p>
+        </div>
+        <div>
+            <h3><i class="fas fa-plane"></i> Luchthaven Transfer</h3>
+            <p>Vervoer van en naar luchthavens met comfort en stijl.</p>
+        </div>
+        <div>
+            <h3><i class="fas fa-birthday-cake"></i> Feestelijke Gelegenheden</h3>
+            <p>Luxueuze ritten voor feesten en evenementen.</p>
+        </div>
+    </div>
     <a href="https://wa.me/31657951523" class="whatsapp-btn" target="_blank">Neem contact op via WhatsApp</a>
 </section>
 
 <section id="testimonials" class="service-section">
     <h2>Getuigenissen</h2>
     <p class="service-description">Lees wat onze tevreden klanten over ons zeggen:</p>
-    <blockquote>
+    <div class="testimonial">
         <p>"Uitstekende service en zeer professionele chauffeurs. Ik voel me altijd veilig en comfortabel tijdens mijn ritten."</p>
         <footer>- Jan de Vries</footer>
-    </blockquote>
-    <blockquote>
+    </div>
+    <div class="testimonial">
         <p>"Altijd op tijd en zeer beleefd. Ik zou dit bedrijf zeker aanbevelen aan anderen."</p>
         <footer>- Maria van den Berg</footer>
-    </blockquote>
+    </div>
 </section>
 
 <section id="location" class="service-section">
