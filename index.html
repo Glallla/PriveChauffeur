@@ -7,11 +7,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOM9mZ9Bp2p6z5s7M6F9p1F4Kp4bYf4h6W6Q7g7T" crossorigin="anonymous">
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
             background-color: #f4f4f9;
             color: #333;
+            line-height: 1.6;
         }
         header {
             background-image: url('https://github.com/Glallla/PriveChauffeur/raw/main/71267eb4-4a24-43b9-811d-075e7bc89eff.webp');
@@ -19,7 +20,7 @@
             background-position: center;
             color: white;
             text-align: center;
-            padding: 140px 20px;
+            padding: 150px 20px;
             position: relative;
         }
         header::after {
@@ -35,207 +36,182 @@
         header h1, header p {
             position: relative;
             z-index: 2;
-            animation: fadeIn 2s ease;
-        }
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
         }
         header h1 {
-            margin: 0;
-            font-size: 48px;
+            font-size: 50px;
             font-weight: bold;
+            margin: 0;
         }
         header p {
-            font-size: 20px;
+            font-size: 22px;
             margin-top: 10px;
         }
         nav {
             background-color: #333;
             color: white;
-            text-align: center;
-            padding: 10px 0;
+            padding: 15px 0;
             position: sticky;
             top: 0;
-            z-index: 999;
+            z-index: 1000;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
         }
         nav a {
             color: white;
-            margin: 0 15px;
             text-decoration: none;
             font-size: 18px;
+            padding: 5px 10px;
+            transition: background 0.3s ease;
         }
         nav a:hover {
-            text-decoration: underline;
+            background-color: #555;
+            border-radius: 5px;
         }
         section {
-            padding: 40px;
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
             text-align: center;
         }
-        .service-description {
+        section h2 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: #2a3d66;
+        }
+        section p {
             font-size: 18px;
             margin-bottom: 30px;
+            color: #555;
         }
-        .whatsapp-btn {
+        .btn-primary {
+            display: inline-block;
             background-color: #25D366;
             color: white;
             padding: 15px 30px;
             font-size: 18px;
             text-decoration: none;
             border-radius: 5px;
-            display: inline-block;
-            margin-top: 20px;
+            transition: background 0.3s ease;
         }
-        .whatsapp-btn:hover {
+        .btn-primary:hover {
             background-color: #128C7E;
         }
-        .service-section {
-            background-color: #fff;
-            padding: 40px;
-            margin: 20px 0;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-        .feature-section {
+        .testimonial {
+            margin: 20px auto;
+            max-width: 600px;
+            padding: 20px;
             background-color: #eef2f7;
-            padding: 40px;
-            text-align: left;
-        }
-        .feature-section ul {
-            list-style-type: none;
-            padding: 0;
-        }
-        .feature-section li {
-            margin-bottom: 10px;
-            font-size: 18px;
-        }
-        .faq-section {
-            background-color: #fff;
-            padding: 40px;
-            margin: 20px 0;
+            border-radius: 5px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
-        .faq-item {
-            text-align: left;
-            margin-bottom: 20px;
+        .testimonial p {
+            font-size: 16px;
+            margin: 0;
+            color: #333;
         }
-        .faq-item h3 {
-            font-size: 20px;
-            margin-bottom: 10px;
+        .testimonial footer {
+            margin-top: 10px;
+            font-size: 14px;
+            color: #555;
+            font-style: italic;
         }
         footer {
             background-color: #2a3d66;
             color: white;
-            padding: 20px;
+            padding: 20px 10px;
             text-align: center;
         }
         footer a {
             color: white;
-            margin: 0 10px;
             text-decoration: none;
+            margin: 0 10px;
         }
         footer a:hover {
             text-decoration: underline;
         }
-        footer .social-icons a {
-            margin: 0 10px;
-            font-size: 20px;
-        }
-        #google_translate_element {
-            margin: 20px;
-        }
-        .carousel {
-            display: flex;
-            overflow-x: auto;
-            scroll-snap-type: x mandatory;
-            gap: 10px;
-            padding: 20px;
-        }
-        .carousel img {
-            scroll-snap-align: center;
-            width: 300px;
-            height: 200px;
-            border-radius: 10px;
-            object-fit: cover;
-        }
-        .contact-info {
-            text-align: left;
-            margin-top: 20px;
-        }
-        .contact-info p {
-            margin: 10px 0;
-            font-size: 16px;
-        }
-        .contact-info i {
-            margin-right: 10px;
-        }
-        .pricing-table {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-            margin: 40px 0;
-        }
-        .pricing-card {
-            background: #fff;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            text-align: center;
-        }
-        .pricing-card h3 {
-            font-size: 24px;
-            margin-bottom: 10px;
-        }
-        .pricing-card p {
-            font-size: 18px;
-            margin: 10px 0;
-        }
-        .pricing-card .price {
-            font-size: 32px;
-            color: #333;
-            margin: 20px 0;
-        }
-        .pricing-card a {
-            display: inline-block;
-            padding: 10px 20px;
-            background-color: #25D366;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-        }
-        .pricing-card a:hover {
-            background-color: #128C7E;
+        @media (min-width: 768px) {
+            nav {
+                justify-content: space-around;
+            }
+            section {
+                text-align: left;
+            }
         }
     </style>
-    <script type="text/javascript">
-        function googleTranslateElementInit() {
-            new google.translate.TranslateElement({pageLanguage: 'nl', includedLanguages: 'en'}, 'google_translate_element');
+    <script>
+        function scrollToSection(id) {
+            const section = document.getElementById(id);
+            if (section) {
+                section.scrollIntoView({ behavior: 'smooth' });
+            }
         }
     </script>
-    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </head>
 <body>
 
 <header>
     <nav>
-        <a href="#about">Over Ons</a>
-        <a href="#services">Diensten</a>
-        <a href="#testimonials">Getuigenissen</a>
-        <a href="#contact">Contact</a>
-        <a href="#location">Locatie</a>
+        <a href="#about" onclick="scrollToSection('about')">Over Ons</a>
+        <a href="#services" onclick="scrollToSection('services')">Diensten</a>
+        <a href="#testimonials" onclick="scrollToSection('testimonials')">Getuigenissen</a>
+        <a href="#contact" onclick="scrollToSection('contact')">Contact</a>
+        <a href="#location" onclick="scrollToSection('location')">Locatie</a>
     </nav>
     <h1>Privé Chauffeur Dienst</h1>
     <p>Betrouwbaar, comfortabel en veilig vervoer op maat</p>
 </header>
 
-<section id="about" class="service-section">
+<section id="about">
     <h2>Over Ons</h2>
-    <p class="service-description">Wij zijn een toonaangevend bedrijf dat gespecialiseerd is in het leveren van hoogwaardige privé chauffeursdiensten. Ons team van ervaren chauffeurs zorgt voor een veilige, comfortabele en betrouwbare reiservaring. Gevestigd in Breda, bieden wij onze diensten aan in en rondom deze regio.</p>
-    <video controls width="80%">
-        <source src="introductie-video.mp4" type="video/mp4">
-        Uw browser ondersteunt deze video niet.
-    </video>
+    <p>Wij bieden luxe privé chauffeurdiensten, ontworpen om aan uw specifieke behoeften te voldoen. Ons team combineert professionaliteit met een klantgerichte aanpak.</p>
 </section>
 
-<section id="services" class="service-section">
-    <h2>Luxe en Comfortabel Vervoer voor Elke Gelegenheid</h2>
-    <
+<section id="services">
+    <h2>Diensten</h2>
+    <p>Ons aanbod varieert van zakelijk vervoer tot speciale gelegenheden. Wij zorgen ervoor dat u veilig en stijlvol op uw bestemming aankomt.</p>
+    <a href="https://wa.me/31657951523" class="btn-primary" target="_blank">Contact via WhatsApp</a>
+</section>
+
+<section id="testimonials">
+    <h2>Getuigenissen</h2>
+    <div class="testimonial">
+        <p>"De chauffeurs zijn professioneel en beleefd. Ik raad deze service sterk aan."</p>
+        <footer>- Maria van Dijk</footer>
+    </div>
+    <div class="testimonial">
+        <p>"Uitmuntende service! Altijd stipt op tijd en erg behulpzaam."</p>
+        <footer>- Jan Vermeer</footer>
+    </div>
+</section>
+
+<section id="location">
+    <h2>Locatie</h2>
+    <p>Gevestigd in Breda, bedienen wij klanten in de regio en daarbuiten. Neem contact op voor meer informatie over onze routes en beschikbaarheid.</p>
+</section>
+
+<section id="contact">
+    <h2>Contact</h2>
+    <p>Heeft u vragen? Vul ons formulier in, en wij nemen zo snel mogelijk contact met u op.</p>
+    <form>
+        <label for="name">Naam:</label><br>
+        <input type="text" id="name" name="name" required><br>
+        <label for="email">E-mail:</label><br>
+        <input type="email" id="email" name="email" required><br>
+        <label for="message">Bericht:</label><br>
+        <textarea id="message" name="message" required></textarea><br>
+        <input type="submit" value="Verzenden">
+    </form>
+</section>
+
+<footer>
+    <p>© 2025 Privé Chauffeur Dienst</p>
+    <a href="#about">Over Ons</a>
+    <a href="#services">Diensten</a>
+    <a href="#testimonials">Getuigenissen</a>
+    <a href="#contact">Contact</a>
+    <a href="#location">Locatie</a>
+</footer>
+
+</body>
+</html>
