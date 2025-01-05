@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOM9mZ9Bp2p6z5s7M6F9p1F4Kp4bYf4h6W6Q7g7T" crossorigin="anonymous">
     <style>
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
             background-color: #f4f4f9;
@@ -20,7 +20,7 @@
             background-position: center;
             color: white;
             text-align: center;
-            padding: 150px 20px;
+            padding: 140px 20px;
             position: relative;
         }
         header::after {
@@ -38,9 +38,9 @@
             z-index: 2;
         }
         header h1 {
+            margin: 0;
             font-size: 50px;
             font-weight: bold;
-            margin: 0;
         }
         header p {
             font-size: 22px;
@@ -49,72 +49,75 @@
         nav {
             background-color: #333;
             color: white;
-            padding: 15px 0;
+            text-align: center;
+            padding: 10px 0;
             position: sticky;
             top: 0;
-            z-index: 1000;
-            display: flex;
-            justify-content: center;
-            gap: 20px;
+            z-index: 999;
         }
         nav a {
             color: white;
+            margin: 0 15px;
             text-decoration: none;
             font-size: 18px;
             padding: 5px 10px;
-            transition: background 0.3s ease;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
         }
         nav a:hover {
-            background-color: #555;
-            border-radius: 5px;
+            background-color: #444;
         }
         section {
-            padding: 40px 20px;
-            max-width: 1200px;
-            margin: 0 auto;
+            padding: 40px;
             text-align: center;
         }
-        section h2 {
-            font-size: 28px;
-            margin-bottom: 20px;
-            color: #2a3d66;
-        }
-        section p {
+        .service-description {
             font-size: 18px;
             margin-bottom: 30px;
             color: #555;
         }
-        .btn-primary {
-            display: inline-block;
+        .whatsapp-btn {
             background-color: #25D366;
             color: white;
             padding: 15px 30px;
             font-size: 18px;
             text-decoration: none;
             border-radius: 5px;
-            transition: background 0.3s ease;
+            display: inline-block;
+            margin-top: 20px;
+            transition: background-color 0.3s ease;
         }
-        .btn-primary:hover {
+        .whatsapp-btn:hover {
             background-color: #128C7E;
         }
-        .testimonial {
-            margin: 20px auto;
-            max-width: 600px;
-            padding: 20px;
-            background-color: #eef2f7;
-            border-radius: 5px;
+        .service-section {
+            background-color: #fff;
+            padding: 40px;
+            margin: 20px 0;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
-        .testimonial p {
-            font-size: 16px;
-            margin: 0;
-            color: #333;
+        .feature-section {
+            background-color: #eef2f7;
+            padding: 40px;
+            text-align: left;
+            max-width: 800px;
+            margin: 0 auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
-        .testimonial footer {
-            margin-top: 10px;
-            font-size: 14px;
-            color: #555;
-            font-style: italic;
+        .feature-section ul {
+            list-style: none;
+            padding: 0;
+        }
+        .feature-section li {
+            margin-bottom: 15px;
+            font-size: 18px;
+            display: flex;
+            align-items: center;
+        }
+        .feature-section li i {
+            color: #25D366;
+            margin-right: 10px;
         }
         footer {
             background-color: #2a3d66;
@@ -124,84 +127,90 @@
         }
         footer a {
             color: white;
-            text-decoration: none;
             margin: 0 10px;
+            text-decoration: none;
         }
         footer a:hover {
             text-decoration: underline;
         }
-        @media (min-width: 768px) {
-            nav {
-                justify-content: space-around;
-            }
-            section {
-                text-align: left;
-            }
+        #google_translate_element {
+            margin: 20px;
+        }
+        .quote {
+            font-style: italic;
+            color: #555;
+            border-left: 4px solid #25D366;
+            padding-left: 15px;
+            margin: 20px 0;
         }
     </style>
     <script>
-        function scrollToSection(id) {
-            const section = document.getElementById(id);
-            if (section) {
-                section.scrollIntoView({ behavior: 'smooth' });
-            }
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({pageLanguage: 'nl', includedLanguages: 'en'}, 'google_translate_element');
         }
     </script>
+    <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </head>
 <body>
 
 <header>
     <nav>
-        <a href="#about" onclick="scrollToSection('about')">Over Ons</a>
-        <a href="#services" onclick="scrollToSection('services')">Diensten</a>
-        <a href="#testimonials" onclick="scrollToSection('testimonials')">Getuigenissen</a>
-        <a href="#contact" onclick="scrollToSection('contact')">Contact</a>
-        <a href="#location" onclick="scrollToSection('location')">Locatie</a>
+        <a href="#about">Over Ons</a>
+        <a href="#services">Diensten</a>
+        <a href="#testimonials">Getuigenissen</a>
+        <a href="#contact">Contact</a>
+        <a href="#location">Locatie</a>
     </nav>
     <h1>Privé Chauffeur Dienst</h1>
     <p>Betrouwbaar, comfortabel en veilig vervoer op maat</p>
 </header>
 
-<section id="about">
+<section id="about" class="service-section">
     <h2>Over Ons</h2>
-    <p>Wij bieden luxe privé chauffeurdiensten, ontworpen om aan uw specifieke behoeften te voldoen. Ons team combineert professionaliteit met een klantgerichte aanpak.</p>
+    <p class="service-description">Wij zijn een toonaangevend bedrijf dat gespecialiseerd is in hoogwaardige privé chauffeursdiensten. Ons team combineert professionaliteit met persoonlijke aandacht voor de klant.</p>
 </section>
 
-<section id="services">
+<section id="services" class="service-section">
     <h2>Diensten</h2>
-    <p>Ons aanbod varieert van zakelijk vervoer tot speciale gelegenheden. Wij zorgen ervoor dat u veilig en stijlvol op uw bestemming aankomt.</p>
-    <a href="https://wa.me/31657951523" class="btn-primary" target="_blank">Contact via WhatsApp</a>
+    <p class="service-description">Van zakelijk vervoer tot speciale gelegenheden, wij zorgen voor veilige, comfortabele en stijlvolle ritten.</p>
+    <a href="https://wa.me/31657951523" class="whatsapp-btn" target="_blank">Contact via WhatsApp</a>
 </section>
 
-<section id="testimonials">
+<section id="testimonials" class="service-section">
     <h2>Getuigenissen</h2>
-    <div class="testimonial">
-        <p>"De chauffeurs zijn professioneel en beleefd. Ik raad deze service sterk aan."</p>
-        <footer>- Maria van Dijk</footer>
-    </div>
-    <div class="testimonial">
-        <p>"Uitmuntende service! Altijd stipt op tijd en erg behulpzaam."</p>
-        <footer>- Jan Vermeer</footer>
-    </div>
+    <p class="quote">"Uitstekende service en altijd op tijd. De chauffeurs zijn professioneel en vriendelijk."</p>
+    <footer>- Jan de Vries</footer>
+    <p class="quote">"Betrouwbare service met luxe voertuigen. Een aanrader!"</p>
+    <footer>- Maria van den Berg</footer>
 </section>
 
-<section id="location">
+<section id="location" class="service-section">
     <h2>Locatie</h2>
-    <p>Gevestigd in Breda, bedienen wij klanten in de regio en daarbuiten. Neem contact op voor meer informatie over onze routes en beschikbaarheid.</p>
+    <p class="service-description">Gevestigd in Breda, bedienen wij klanten in de regio en daarbuiten.</p>
 </section>
 
-<section id="contact">
+<section id="contact" class="service-section">
     <h2>Contact</h2>
-    <p>Heeft u vragen? Vul ons formulier in, en wij nemen zo snel mogelijk contact met u op.</p>
+    <p class="service-description">Neem contact met ons op voor meer informatie of om een boeking te maken.</p>
     <form>
         <label for="name">Naam:</label><br>
         <input type="text" id="name" name="name" required><br>
-        <label for="email">E-mail:</label><br>
+        <label for="email">Email:</label><br>
         <input type="email" id="email" name="email" required><br>
         <label for="message">Bericht:</label><br>
         <textarea id="message" name="message" required></textarea><br>
         <input type="submit" value="Verzenden">
     </form>
+</section>
+
+<section class="feature-section">
+    <h2>Waarom Kiezen voor Ons?</h2>
+    <ul>
+        <li><i class="fas fa-check"></i> Professionele chauffeurs</li>
+        <li><i class="fas fa-check"></i> Luxe voertuigen</li>
+        <li><i class="fas fa-check"></i> Beschikbaar 24/7</li>
+        <li><i class="fas fa-check"></i> Klantgerichte service</li>
+    </ul>
 </section>
 
 <footer>
@@ -212,6 +221,8 @@
     <a href="#contact">Contact</a>
     <a href="#location">Locatie</a>
 </footer>
+
+<div id="google_translate_element"></div>
 
 </body>
 </html>
