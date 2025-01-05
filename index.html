@@ -35,6 +35,11 @@
         header h1, header p {
             position: relative;
             z-index: 2;
+            animation: fadeIn 2s ease;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
         }
         header h1 {
             margin: 0;
@@ -131,6 +136,10 @@
         footer a:hover {
             text-decoration: underline;
         }
+        footer .social-icons a {
+            margin: 0 10px;
+            font-size: 20px;
+        }
         #google_translate_element {
             margin: 20px;
         }
@@ -159,6 +168,43 @@
         .contact-info i {
             margin-right: 10px;
         }
+        .pricing-table {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 40px 0;
+        }
+        .pricing-card {
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .pricing-card h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        .pricing-card p {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+        .pricing-card .price {
+            font-size: 32px;
+            color: #333;
+            margin: 20px 0;
+        }
+        .pricing-card a {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #25D366;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .pricing-card a:hover {
+            background-color: #128C7E;
+        }
     </style>
     <script type="text/javascript">
         function googleTranslateElementInit() {
@@ -184,83 +230,12 @@
 <section id="about" class="service-section">
     <h2>Over Ons</h2>
     <p class="service-description">Wij zijn een toonaangevend bedrijf dat gespecialiseerd is in het leveren van hoogwaardige privé chauffeursdiensten. Ons team van ervaren chauffeurs zorgt voor een veilige, comfortabele en betrouwbare reiservaring. Gevestigd in Breda, bieden wij onze diensten aan in en rondom deze regio.</p>
+    <video controls width="80%">
+        <source src="introductie-video.mp4" type="video/mp4">
+        Uw browser ondersteunt deze video niet.
+    </video>
 </section>
 
 <section id="services" class="service-section">
     <h2>Luxe en Comfortabel Vervoer voor Elke Gelegenheid</h2>
-    <p class="service-description">Of je nu een zakelijke vergadering hebt, naar een speciale gelegenheid reist of gewoon van punt A naar B wilt komen, wij bieden op maat gemaakte chauffeurdiensten aan.</p>
-    <a href="https://wa.me/31657951523" class="whatsapp-btn" target="_blank">Neem contact op via WhatsApp</a>
-</section>
-
-<section id="testimonials" class="service-section">
-    <h2>Getuigenissen</h2>
-    <p class="service-description">Lees wat onze tevreden klanten over ons zeggen:</p>
-    <blockquote>
-        <p>"Uitstekende service en zeer professionele chauffeurs. Ik voel me altijd veilig en comfortabel tijdens mijn ritten."</p>
-        <footer>- Jan de Vries</footer>
-    </blockquote>
-    <blockquote>
-        <p>"Altijd op tijd en zeer beleefd. Ik zou dit bedrijf zeker aanbevelen aan anderen."</p>
-        <footer>- Maria van den Berg</footer>
-    </blockquote>
-</section>
-
-<section id="gallery" class="service-section">
-    <h2>Onze Voertuigen</h2>
-    <div class="carousel">
-        <img src="https://via.placeholder.com/300x200" alt="Luxe voertuig 1">
-        <img src="https://via.placeholder.com/300x200" alt="Luxe voertuig 2">
-        <img src="https://via.placeholder.com/300x200" alt="Luxe voertuig 3">
-    </div>
-</section>
-
-<section id="faq" class="faq-section">
-    <h2>Veelgestelde Vragen</h2>
-    <div class="faq-item">
-        <h3>Hoe kan ik een chauffeur boeken?</h3>
-        <p>U kunt eenvoudig contact met ons opnemen via WhatsApp of ons contactformulier invullen.</p>
-    </div>
-    <div class="faq-item">
-        <h3>Welke regio's dekt uw service?</h3>
-        <p>Wij bieden onze diensten aan in Breda en omliggende regio's, inclusief langeafstandsritten.</p>
-    </div>
-</section>
-
-<section id="location" class="service-section">
-    <h2>Locatie</h2>
-    <p class="service-description">Ons kantoor is gevestigd in Breda. Wij zijn beschikbaar voor ritten in de hele regio en daarbuiten. Neem contact met ons op voor meer informatie over onze diensten en beschikbaarheid.</p>
-</section>
-
-<section id="contact" class="service-section">
-    <h2>Contact</h2>
-    <p class="service-description">Neem contact met ons op voor meer informatie of om een boeking te maken.</p>
-    <form>
-        <label for="name">Naam:</label><br>
-        <input type="text" id="name" name="name"><br>
-        <label for="email">Email:</label><br>
-        <input type="email" id="email" name="email"><br>
-        <label for="message">Bericht:</label><br>
-        <textarea id="message" name="message"></textarea><br>
-        <input type="submit" value="Verzenden">
-    </form>
-    <div class="contact-info">
-        <p><i class="fas fa-phone"></i> +31 6 57951523</p>
-        <p><i class="fas fa-envelope"></i> info@privechauffeur.nl</p>
-        <p><i class="fas fa-map-marker-alt"></i> Breda, Nederland</p>
-    </div>
-</section>
-
-<section class="feature-section">
-    <h2>Waarom Kiezen voor Ons?</h2>
-    <ul>
-        <li><i class="fas fa-check"></i> Ervaren en professionele chauffeurs</li>
-        <li><i class="fas fa-check"></i> Luxe voertuigen uitgerust met moderne voorzieningen</li>
-        <li><i class="fas fa-check"></i> 24/7 beschikbaarheid</li>
-        <li><i class="fas fa-check"></i> Klantgerichte service</li>
-    </ul>
-</section>
-
-<footer>
-    <p>© 2025 Privé Chauffeur Dienst</p>
-    <a href="#about">Over Ons</a>
-   
+    <
