@@ -14,27 +14,11 @@
             color: #333;
         }
         header {
-            background-image: url('https://github.com/Glallla/PriveChauffeur/raw/main/71267eb4-4a24-43b9-811d-075e7bc89eff.webp');
-            background-size: cover;
-            background-position: center;
+            background-color: #2a3d66;
             color: white;
             text-align: center;
             padding: 140px 20px;
             position: relative;
-        }
-        header::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.5);
-            z-index: 1;
-        }
-        header h1, header p {
-            position: relative;
-            z-index: 2;
         }
         header h1 {
             margin: 0;
@@ -147,6 +131,31 @@
         .contact-form input[type="submit"]:hover {
             background-color: #1a2d50;
         }
+        .faq-section {
+            background-color: #fff;
+            padding: 40px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+        .faq {
+            display: flex;
+            justify-content: space-between;
+            margin: 10px 0;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .faq:hover {
+            background-color: #f0f0f0;
+        }
+        .faq-answer {
+            display: none;
+            padding-top: 10px;
+        }
+        .faq.open .faq-answer {
+            display: block;
+        }
         .hero {
             display: flex;
             justify-content: center;
@@ -162,28 +171,6 @@
             font-size: 18px;
             max-width: 600px;
         }
-        .testimonial {
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            margin: 20px;
-            max-width: 500px;
-            display: inline-block;
-            text-align: left;
-        }
-        .testimonial p {
-            font-style: italic;
-        }
-        .testimonial footer {
-            font-weight: bold;
-            text-align: right;
-        }
-        .service-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 20px;
-        }
     </style>
 </head>
 <body>
@@ -193,6 +180,7 @@
         <a href="#about">Over Ons</a>
         <a href="#services">Diensten</a>
         <a href="#testimonials">Getuigenissen</a>
+        <a href="#faq">FAQ</a>
         <a href="#contact">Contact</a>
         <a href="#location">Locatie</a>
     </nav>
@@ -207,24 +195,13 @@
 
 <section id="services" class="service-section">
     <h2>Luxe en Comfortabel Vervoer voor Elke Gelegenheid</h2>
-    <div class="service-grid">
-        <div>
-            <h3><i class="fas fa-briefcase"></i> Zakelijke Vervoer</h3>
-            <p>Professionele chauffeurs voor al uw zakelijke afspraken.</p>
-        </div>
-        <div>
-            <h3><i class="fas fa-wedding"></i> Bruiloften</h3>
-            <p>Speciale arrangementen voor uw mooiste dag.</p>
-        </div>
-        <div>
-            <h3><i class="fas fa-plane"></i> Luchthaven Transfer</h3>
-            <p>Vervoer van en naar luchthavens met comfort en stijl.</p>
-        </div>
-        <div>
-            <h3><i class="fas fa-birthday-cake"></i> Feestelijke Gelegenheden</h3>
-            <p>Luxueuze ritten voor feesten en evenementen.</p>
-        </div>
-    </div>
+    <p class="service-description">Onze diensten omvatten:</p>
+    <ul style="list-style-type: none; padding: 0; font-size: 18px;">
+        <li><i class="fas fa-briefcase"></i> Zakelijke Vervoer</li>
+        <li><i class="fas fa-wedding"></i> Bruiloften</li>
+        <li><i class="fas fa-plane"></i> Luchthaven Transfer</li>
+        <li><i class="fas fa-birthday-cake"></i> Feestelijke Gelegenheden</li>
+    </ul>
     <a href="https://wa.me/31657951523" class="whatsapp-btn" target="_blank">Neem contact op via WhatsApp</a>
 </section>
 
@@ -238,6 +215,22 @@
     <div class="testimonial">
         <p>"Altijd op tijd en zeer beleefd. Ik zou dit bedrijf zeker aanbevelen aan anderen."</p>
         <footer>- Maria van den Berg</footer>
+    </div>
+</section>
+
+<section id="faq" class="faq-section">
+    <h2>Veelgestelde Vragen (FAQ)</h2>
+    <div class="faq">
+        <div class="faq-question">Hoe kan ik een rit boeken?</div>
+        <div class="faq-answer">U kunt ons bereiken via WhatsApp of ons contactformulier invullen.</div>
+    </div>
+    <div class="faq">
+        <div class="faq-question">Wat zijn de tarieven voor uw diensten?</div>
+        <div class="faq-answer">Onze tarieven zijn afhankelijk van de afstand en het type dienst. Neem contact met ons op voor een offerte.</div>
+    </div>
+    <div class="faq">
+        <div class="faq-question">Zijn uw chauffeurs gecertificeerd?</div>
+        <div class="faq-answer">Ja, al onze chauffeurs zijn professioneel opgeleid en gecertificeerd.</div>
     </div>
 </section>
 
@@ -275,6 +268,7 @@
     <a href="#about">Over Ons</a>
     <a href="#services">Diensten</a>
     <a href="#testimonials">Getuigenissen</a>
+    <a href="#faq">FAQ</a>
     <a href="#contact">Contact</a>
     <a href="#location">Locatie</a>
 </footer>
@@ -285,6 +279,11 @@
     function googleTranslateElementInit() {
         new google.translate.TranslateElement({pageLanguage: 'nl', includedLanguages: 'en'}, 'google_translate_element');
     }
+    document.querySelectorAll('.faq').forEach(faq => {
+        faq.addEventListener('click', () => {
+            faq.classList.toggle('open');
+        });
+    });
 </script>
 <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
