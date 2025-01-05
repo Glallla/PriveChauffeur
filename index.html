@@ -6,14 +6,12 @@
     <title>Privé Chauffeur Dienst</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOM9mZ9Bp2p6z5s7M6F9p1F4Kp4bYf4h6W6Q7g7T" crossorigin="anonymous">
     <style>
-        /* Algemene opmaak */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
             background-color: #f4f4f9;
             color: #333;
-            line-height: 1.6;
         }
         header {
             background-image: url('https://github.com/Glallla/PriveChauffeur/raw/main/71267eb4-4a24-43b9-811d-075e7bc89eff.webp');
@@ -31,7 +29,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0.6);
+            background: rgba(0, 0, 0, 0.5);
             z-index: 1;
         }
         header h1, header p {
@@ -39,6 +37,7 @@
             z-index: 2;
         }
         header h1 {
+            margin: 0;
             font-size: 48px;
             font-weight: bold;
         }
@@ -46,8 +45,6 @@
             font-size: 20px;
             margin-top: 10px;
         }
-
-        /* Navigatie */
         nav {
             background-color: #333;
             color: white;
@@ -56,73 +53,56 @@
             position: sticky;
             top: 0;
             z-index: 999;
-            display: flex;
-            justify-content: center;
-            gap: 15px;
         }
         nav a {
             color: white;
+            margin: 0 15px;
             text-decoration: none;
             font-size: 18px;
-            padding: 10px 15px;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
         }
         nav a:hover {
-            background-color: #444;
+            text-decoration: underline;
         }
-
-        /* Secties */
         section {
-            padding: 40px 20px;
-            max-width: 1200px;
-            margin: auto;
+            padding: 40px;
             text-align: center;
         }
         .service-description {
             font-size: 18px;
-            color: #555;
             margin-bottom: 30px;
         }
-        .service-section {
-            background: #fff;
-            margin: 20px 0;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
-        }
-
-        /* Call-to-Action Knoppen */
-        .whatsapp-btn, .cta-btn {
+        .whatsapp-btn {
             background-color: #25D366;
             color: white;
             padding: 15px 30px;
             font-size: 18px;
             text-decoration: none;
             border-radius: 5px;
-            margin-top: 20px;
             display: inline-block;
-            transition: background-color 0.3s ease;
+            margin-top: 20px;
         }
-        .whatsapp-btn:hover, .cta-btn:hover {
+        .whatsapp-btn:hover {
             background-color: #128C7E;
         }
-
-        /* Getuigenissen */
-        blockquote {
-            font-style: italic;
-            color: #555;
-            border-left: 4px solid #25D366;
-            padding-left: 15px;
-            margin: 20px auto;
-            max-width: 600px;
+        .service-section {
+            background-color: #fff;
+            padding: 40px;
+            margin: 20px 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
-        blockquote footer {
-            font-size: 14px;
-            color: #333;
-            text-align: right;
+        .feature-section {
+            background-color: #eef2f7;
+            padding: 40px;
+            text-align: left;
         }
-
-        /* Voetnoot */
+        .feature-section ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .feature-section li {
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
         footer {
             background-color: #2a3d66;
             color: white;
@@ -131,56 +111,22 @@
         }
         footer a {
             color: white;
-            text-decoration: none;
             margin: 0 10px;
+            text-decoration: none;
         }
         footer a:hover {
             text-decoration: underline;
         }
-
-        /* Features */
-        .feature-section ul {
-            list-style: none;
-            padding: 0;
-            max-width: 800px;
-            margin: 0 auto;
-            text-align: left;
-        }
-        .feature-section li {
-            margin: 15px 0;
-            font-size: 18px;
-            display: flex;
-            align-items: center;
-        }
-        .feature-section li i {
-            color: #25D366;
-            margin-right: 10px;
-        }
-
-        /* Smooth Scrolling */
-        html {
-            scroll-behavior: smooth;
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            header h1 {
-                font-size: 36px;
-            }
-            header p {
-                font-size: 18px;
-            }
-            nav {
-                flex-wrap: wrap;
-            }
+        #google_translate_element {
+            margin: 20px;
         }
     </style>
-    <script>
-        // Voeg smooth scroll functionaliteit toe (indien niet standaard beschikbaar)
-        function smoothScrollTo(targetId) {
-            document.getElementById(targetId).scrollIntoView({ behavior: 'smooth' });
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({pageLanguage: 'nl', includedLanguages: 'en'}, 'google_translate_element');
         }
     </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </head>
 <body>
 
@@ -198,51 +144,53 @@
 
 <section id="about" class="service-section">
     <h2>Over Ons</h2>
-    <p class="service-description">Wij bieden hoogwaardige chauffeurdiensten voor elke gelegenheid, waarbij comfort en veiligheid altijd voorop staan.</p>
+    <p class="service-description">Wij zijn een toonaangevend bedrijf dat gespecialiseerd is in het leveren van hoogwaardige privé chauffeursdiensten. Ons team van ervaren chauffeurs zorgt voor een veilige, comfortabele en betrouwbare reiservaring. Gevestigd in Breda, bieden wij onze diensten aan in en rondom deze regio.</p>
 </section>
 
 <section id="services" class="service-section">
-    <h2>Diensten</h2>
-    <p class="service-description">Van zakelijke bijeenkomsten tot speciale gelegenheden, onze professionele chauffeurs staan klaar om u te vervoeren.</p>
-    <a href="https://wa.me/31657951523" class="whatsapp-btn" target="_blank" aria-label="Contact via WhatsApp">Neem contact op via WhatsApp</a>
+    <h2>Luxe en Comfortabel Vervoer voor Elke Gelegenheid</h2>
+    <p class="service-description">Of je nu een zakelijke vergadering hebt, naar een speciale gelegenheid reist of gewoon van punt A naar B wilt komen, wij bieden op maat gemaakte chauffeurdiensten aan.</p>
+    <a href="https://wa.me/31657951523" class="whatsapp-btn" target="_blank">Neem contact op via WhatsApp</a>
 </section>
 
 <section id="testimonials" class="service-section">
     <h2>Getuigenissen</h2>
+    <p class="service-description">Lees wat onze tevreden klanten over ons zeggen:</p>
     <blockquote>
-        "Uitstekende service! De chauffeur was professioneel en beleefd." 
+        <p>"Uitstekende service en zeer professionele chauffeurs. Ik voel me altijd veilig en comfortabel tijdens mijn ritten."</p>
         <footer>- Jan de Vries</footer>
     </blockquote>
     <blockquote>
-        "Luxe en comfort in elke rit. Een echte aanrader!" 
+        <p>"Altijd op tijd en zeer beleefd. Ik zou dit bedrijf zeker aanbevelen aan anderen."</p>
         <footer>- Maria van den Berg</footer>
     </blockquote>
 </section>
 
 <section id="location" class="service-section">
     <h2>Locatie</h2>
-    <p class="service-description">Gevestigd in Breda, beschikbaar voor ritten in de regio en daarbuiten.</p>
+    <p class="service-description">Ons kantoor is gevestigd in Breda. Wij zijn beschikbaar voor ritten in de hele regio en daarbuiten. Neem contact met ons op voor meer informatie over onze diensten en beschikbaarheid.</p>
 </section>
 
 <section id="contact" class="service-section">
     <h2>Contact</h2>
+    <p class="service-description">Neem contact met ons op voor meer informatie of om een boeking te maken.</p>
     <form>
         <label for="name">Naam:</label><br>
-        <input type="text" id="name" name="name" required><br>
-        <label for="email">E-mail:</label><br>
-        <input type="email" id="email" name="email" required><br>
+        <input type="text" id="name" name="name"><br>
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email"><br>
         <label for="message">Bericht:</label><br>
-        <textarea id="message" name="message" required></textarea><br>
-        <input type="submit" value="Verzenden" class="cta-btn">
+        <textarea id="message" name="message"></textarea><br>
+        <input type="submit" value="Verzenden">
     </form>
 </section>
 
 <section class="feature-section">
     <h2>Waarom Kiezen voor Ons?</h2>
     <ul>
-        <li><i class="fas fa-check"></i> Professionele chauffeurs</li>
-        <li><i class="fas fa-check"></i> Luxe voertuigen</li>
-        <li><i class="fas fa-check"></i> Beschikbaar 24/7</li>
+        <li><i class="fas fa-check"></i> Ervaren en professionele chauffeurs</li>
+        <li><i class="fas fa-check"></i> Luxe voertuigen uitgerust met moderne voorzieningen</li>
+        <li><i class="fas fa-check"></i> 24/7 beschikbaarheid</li>
         <li><i class="fas fa-check"></i> Klantgerichte service</li>
     </ul>
 </section>
