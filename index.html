@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOM9mZ9Bp2p6z5s7M6F9p1F4Kp4bYf4h6W6Q7g7T" crossorigin="anonymous">
     <style>
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
             background-color: #f4f4f9;
@@ -19,7 +19,7 @@
             background-position: center;
             color: white;
             text-align: center;
-            padding: 120px 20px;
+            padding: 140px 20px;
             position: relative;
         }
         header::after {
@@ -29,7 +29,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0.6);
+            background: rgba(0, 0, 0, 0.5);
             z-index: 1;
         }
         header h1, header p {
@@ -63,45 +63,148 @@
         nav a:hover {
             text-decoration: underline;
         }
-        .hero-section {
-            text-align: center;
+        section {
             padding: 40px;
+            text-align: center;
         }
-        .cta-button {
-            background-color: #007bff;
+        .service-description {
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+        .whatsapp-btn {
+            background-color: #25D366;
             color: white;
             padding: 15px 30px;
+            font-size: 18px;
             text-decoration: none;
             border-radius: 5px;
-            font-size: 18px;
+            display: inline-block;
+            margin-top: 20px;
         }
-        .cta-button:hover {
-            background-color: #0056b3;
+        .whatsapp-btn:hover {
+            background-color: #128C7E;
         }
-        .services, .testimonials, .location, .contact {
-            padding: 40px 20px;
+        .service-section {
+            background-color: #fff;
+            padding: 40px;
+            margin: 20px 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
-        .services h2, .testimonials h2, .location h2, .contact h2 {
-            text-align: center;
-            font-size: 28px;
-            margin-bottom: 20px;
-        }
-        .service-card {
-            display: flex;
-            flex-direction: column;
-            background: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            text-align: center;
-        }
-
-        footer {
-            background: linear-gradient(to top, #3366cc, #3399ff);
+        .feature-section {
+            background-color: #eef2f7;
+            padding: 40px;
             text-align: left;
         }
+        .feature-section ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .feature-section li {
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+        footer {
+            background-color: #2a3d66;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        footer a {
+            color: white;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+        #google_translate_element {
+            margin: 20px;
+        }
     </style>
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({pageLanguage: 'nl', includedLanguages: 'en'}, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </head>
 <body>
 
-<header></header>
+<header>
+    <nav>
+        <a href="#about">Over Ons</a>
+        <a href="#services">Diensten</a>
+        <a href="#testimonials">Getuigenissen</a>
+        <a href="#contact">Contact</a>
+        <a href="#location">Locatie</a>
+    </nav>
+    <h1>Privé Chauffeur Dienst</h1>
+    <p>Betrouwbaar, comfortabel en veilig vervoer op maat</p>
+</header>
+
+<section id="about" class="service-section">
+    <h2>Over Ons</h2>
+    <p class="service-description">Wij zijn een toonaangevend bedrijf dat gespecialiseerd is in het leveren van hoogwaardige privé chauffeursdiensten. Ons team van ervaren chauffeurs zorgt voor een veilige, comfortabele en betrouwbare reiservaring. Gevestigd in Breda, bieden wij onze diensten aan in en rondom deze regio.</p>
+</section>
+
+<section id="services" class="service-section">
+    <h2>Luxe en Comfortabel Vervoer voor Elke Gelegenheid</h2>
+    <p class="service-description">Of je nu een zakelijke vergadering hebt, naar een speciale gelegenheid reist of gewoon van punt A naar B wilt komen, wij bieden op maat gemaakte chauffeurdiensten aan.</p>
+    <a href="https://wa.me/31657951523" class="whatsapp-btn" target="_blank">Neem contact op via WhatsApp</a>
+</section>
+
+<section id="testimonials" class="service-section">
+    <h2>Getuigenissen</h2>
+    <p class="service-description">Lees wat onze tevreden klanten over ons zeggen:</p>
+    <blockquote>
+        <p>"Uitstekende service en zeer professionele chauffeurs. Ik voel me altijd veilig en comfortabel tijdens mijn ritten."</p>
+        <footer>- Jan de Vries</footer>
+    </blockquote>
+    <blockquote>
+        <p>"Altijd op tijd en zeer beleefd. Ik zou dit bedrijf zeker aanbevelen aan anderen."</p>
+        <footer>- Maria van den Berg</footer>
+    </blockquote>
+</section>
+
+<section id="location" class="service-section">
+    <h2>Locatie</h2>
+    <p class="service-description">Ons kantoor is gevestigd in Breda. Wij zijn beschikbaar voor ritten in de hele regio en daarbuiten. Neem contact met ons op voor meer informatie over onze diensten en beschikbaarheid.</p>
+</section>
+
+<section id="contact" class="service-section">
+    <h2>Contact</h2>
+    <p class="service-description">Neem contact met ons op voor meer informatie of om een boeking te maken.</p>
+    <form>
+        <label for="name">Naam:</label><br>
+        <input type="text" id="name" name="name"><br>
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email"><br>
+        <label for="message">Bericht:</label><br>
+        <textarea id="message" name="message"></textarea><br>
+        <input type="submit" value="Verzenden">
+    </form>
+</section>
+
+<section class="feature-section">
+    <h2>Waarom Kiezen voor Ons?</h2>
+    <ul>
+        <li><i class="fas fa-check"></i> Ervaren en professionele chauffeurs</li>
+        <li><i class="fas fa-check"></i> Luxe voertuigen uitgerust met moderne voorzieningen</li>
+        <li><i class="fas fa-check"></i> 24/7 beschikbaarheid</li>
+        <li><i class="fas fa-check"></i> Klantgerichte service</li>
+    </ul>
+</section>
+
+<footer>
+    <p>© 2025 Privé Chauffeur Dienst</p>
+    <a href="#about">Over Ons</a>
+    <a href="#services">Diensten</a>
+    <a href="#testimonials">Getuigenissen</a>
+    <a href="#contact">Contact</a>
+    <a href="#location">Locatie</a>
+</footer>
+
+<div id="google_translate_element"></div>
+
+</body>
+</html>
