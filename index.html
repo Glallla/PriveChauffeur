@@ -14,11 +14,27 @@
             color: #333;
         }
         header {
-            background-color: #2a3d66;
+            background-image: url('https://github.com/Glallla/PriveChauffeur/raw/main/71267eb4-4a24-43b9-811d-075e7bc89eff.webp');
+            background-size: cover;
+            background-position: center;
             color: white;
             text-align: center;
             padding: 140px 20px;
             position: relative;
+        }
+        header::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1;
+        }
+        header h1, header p {
+            position: relative;
+            z-index: 2;
         }
         header h1 {
             margin: 0;
@@ -131,6 +147,28 @@
         .contact-form input[type="submit"]:hover {
             background-color: #1a2d50;
         }
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        .testimonial {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin: 20px;
+            max-width: 500px;
+            display: inline-block;
+            text-align: left;
+        }
+        .testimonial p {
+            font-style: italic;
+        }
+        .testimonial footer {
+            font-weight: bold;
+            text-align: right;
+        }
         .faq-section {
             background-color: #fff;
             padding: 40px;
@@ -178,13 +216,24 @@
 
 <section id="services" class="service-section">
     <h2>Luxe en Comfortabel Vervoer voor Elke Gelegenheid</h2>
-    <p class="service-description">Onze diensten omvatten:</p>
-    <ul style="list-style-type: none; padding: 0; font-size: 18px;">
-        <li><i class="fas fa-briefcase"></i> Zakelijk vervoer</li>
-        <li><i class="fas fa-wedding"></i> Bruiloften</li>
-        <li><i class="fas fa-plane"></i> Luchthaven transfers</li>
-        <li><i class="fas fa-birthday-cake"></i> Feestelijke gelegenheden</li>
-    </ul>
+    <div class="service-grid">
+        <div>
+            <h3><i class="fas fa-briefcase"></i> Zakelijke Vervoer</h3>
+            <p>Professionele chauffeurs voor al uw zakelijke afspraken.</p>
+        </div>
+        <div>
+            <h3><i class="fas fa-wedding"></i> Bruiloften</h3>
+            <p>Speciale arrangementen voor uw mooiste dag.</p>
+        </div>
+        <div>
+            <h3><i class="fas fa-plane"></i> Luchthaven Transfer</h3>
+            <p>Vervoer van en naar luchthavens met comfort en stijl.</p>
+        </div>
+        <div>
+            <h3><i class="fas fa-birthday-cake"></i> Feestelijke Gelegenheden</h3>
+            <p>Luxueuze ritten voor feesten en evenementen.</p>
+        </div>
+    </div>
     <a href="https://wa.me/31657951523" class="whatsapp-btn" target="_blank">Neem contact op via WhatsApp</a>
 </section>
 
