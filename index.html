@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Privé Chauffeur Dienst</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOM9mZ9Bp2p6z5s7M6F9p1F4Kp4bYf4h6W6Q7g7T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         body {
             font-family: 'Arial', sans-serif;
@@ -215,6 +215,30 @@
         .cta-section p {
             font-size: 18px;
         }
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 32px;
+            }
+            header p {
+                font-size: 16px;
+            }
+            section {
+                padding: 20px;
+            }
+            .service-description {
+                font-size: 16px;
+            }
+            .whatsapp-btn {
+                padding: 10px 20px;
+                font-size: 16px;
+            }
+            .service-section, .feature-section, .faq-section, .cta-section {
+                padding: 20px;
+            }
+            .service-grid {
+                grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            }
+        }
     </style>
 </head>
 <body>
@@ -235,7 +259,7 @@
 
 <section id="about" class="service-section">
     <h2>Over Ons</h2>
-    <p class="service-description">Wij zijn een toonaangevend bedrijf dat gespecialiseerd is in het leveren van hoogwaardige privé chauffeursdiensten. Ons team van ervaren chauffeurs zorgt voor een uitstekende rijervaring.</p>
+    <p class="service-description">Wij zijn een toonaangevend bedrijf dat gespecialiseerd is in het leveren van hoogwaardige privé chauffeursdiensten. Ons team van ervaren chauffeurs zorgt voor een veilige en comfortabele rit.</p>
 </section>
 
 <section id="services" class="service-section">
@@ -278,7 +302,7 @@
     <h2>Veelgestelde Vragen (FAQ)</h2>
     <div class="faq">
         <div class="faq-question">Hoe kan ik een rit boeken?</div>
-        <div class="faq-answer">U kunt eenvoudig een rit boeken via Whatsapp of het contactformulier. Voer de gewenste ophaallocatie, bestemming en tijd in, en wij zorgen voor een chauffeur die op tijd voor u klaarstaat.</div>
+        <div class="faq-answer">U kunt eenvoudig een rit boeken via Whatsapp of het contactformulier. Voer de gewenste ophaallocatie, bestemming en tijd in, en wij zorgen voor een chauffeur die op tijd is.</div>
     </div>
     <div class="faq">
         <div class="faq-question">Wat zijn de kosten voor een rit?</div>
@@ -290,7 +314,7 @@
     </div>
     <div class="faq">
         <div class="faq-question">Kan ik de chauffeur kiezen?</div>
-        <div class="faq-answer">Onze chauffeurs worden zorgvuldig geselecteerd en toegewezen op basis van beschikbaarheid. Specifieke chauffeurverzoeken kunnen worden gedaan, maar we kunnen niet altijd garanderen dat een bepaalde chauffeur beschikbaar is.</div>
+        <div class="faq-answer">Onze chauffeurs worden zorgvuldig geselecteerd en toegewezen op basis van beschikbaarheid. Specifieke chauffeurverzoeken kunnen worden gedaan, maar we kunnen niet altijd garanderen dat uw verzoek kan worden ingewilligd.</div>
     </div>
     <div class="faq">
         <div class="faq-question">Wat gebeurt er als ik mijn rit moet annuleren?</div>
@@ -302,11 +326,11 @@
     </div>
     <div class="faq">
         <div class="faq-question">Wat is inbegrepen in de ritprijs?</div>
-        <div class="faq-answer">De ritprijs omvat de kosten voor de chauffeur, het voertuig en de reis zelf. Eventuele extra kosten zoals tolwegen of parkeergelden worden vooraf gecommuniceerd en kunnen worden toegevoegd aan het totaalbedrag.</div>
+        <div class="faq-answer">De ritprijs omvat de kosten voor de chauffeur, het voertuig en de reis zelf. Eventuele extra kosten zoals tolwegen of parkeergelden worden vooraf gecommuniceerd en duidelijk vermeld.</div>
     </div>
     <div class="faq">
         <div class="faq-question">Zijn er extra kosten voor lange ritten of speciale verzoeken?</div>
-        <div class="faq-answer">Voor langere ritten of speciale verzoeken, zoals meerdere stops of het meenemen van extra bagage, kunnen extra kosten in rekening worden gebracht. Deze worden altijd vooraf met u besproken bij het boeken.</div>
+        <div class="faq-answer">Voor langere ritten of speciale verzoeken, zoals meerdere stops of het meenemen van extra bagage, kunnen extra kosten in rekening worden gebracht. Deze worden altijd vooraf gecommuniceerd.</div>
     </div>
     <div class="faq">
         <div class="faq-question">Wat als ik mijn chauffeur niet kan vinden?</div>
@@ -314,15 +338,15 @@
     </div>
     <div class="faq">
         <div class="faq-question">Kan ik mijn rit delen met anderen?</div>
-        <div class="faq-answer">Onze service biedt de mogelijkheid om ritten te delen met andere passagiers, afhankelijk van beschikbaarheid. Dit kan een kosteneffectieve optie zijn, vooral voor langere ritten.</div>
+        <div class="faq-answer">Onze service biedt de mogelijkheid om ritten te delen met andere passagiers, afhankelijk van beschikbaarheid. Dit kan een kosteneffectieve optie zijn, vooral voor langere afstanden.</div>
     </div>
     <div class="faq">
         <div class="faq-question">Hoe veilig zijn de voertuigen?</div>
-        <div class="faq-answer">Onze voertuigen worden regelmatig gecontroleerd en onderhouden om te voldoen aan de hoogste veiligheidsnormen. We zorgen ervoor dat alles in perfecte staat is voor uw reis.</div>
+        <div class="faq-answer">Onze voertuigen worden regelmatig gecontroleerd en onderhouden om te voldoen aan de hoogste veiligheidsnormen. We zorgen ervoor dat alles in perfecte staat is voor uw rit.</div>
     </div>
     <div class="faq">
         <div class="faq-question">Kan ik een chauffeur voor een langere periode reserveren?</div>
-        <div class="faq-answer">Ja, het is mogelijk om een chauffeur voor een langere periode te reserveren, bijvoorbeeld voor een hele dag of meerdere dagen. Neem contact op voor meer informatie en prijzen.</div>
+        <div class="faq-answer">Ja, het is mogelijk om een chauffeur voor een langere periode te reserveren, bijvoorbeeld voor een hele dag of meerdere dagen. Neem contact op voor meer informatie en tarieven.</div>
     </div>
 </section>
 
