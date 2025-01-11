@@ -217,38 +217,6 @@
         .cta-section p {
             font-size: 18px;
         }
-        .gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-            gap: 10px;
-            padding: 20px;
-        }
-        .gallery img {
-            width: 100%;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-        .blog-section {
-            background-color: #fff;
-            padding: 40px;
-            margin: 20px 0;
-            border-radius: 8px;
-        }
-        .blog-post {
-            margin-bottom: 20px;
-            padding: 20px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            transition: box-shadow 0.2s;
-        }
-        .blog-post:hover {
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        }
-        .calendar {
-            margin: 20px auto;
-            max-width: 600px;
-            text-align: left;
-        }
         @media (max-width: 768px) {
             header h1 {
                 font-size: 32px;
@@ -272,9 +240,6 @@
             .service-grid {
                 grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
             }
-            .gallery {
-                grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-            }
         }
     </style>
 </head>
@@ -285,10 +250,8 @@
     <a href="#services">Diensten</a>
     <a href="#reviews">Recensies</a>
     <a href="#faq">FAQ</a>
-    <a href="#gallery">Galerij</a>
-    <a href="#blog">Blog</a>
     <a href="#contact">Contact</a>
-    <a href="#calendar">Boek Nu</a>
+    <a href="#location">Locatie</a>
 </nav>
 
 <header>
@@ -367,40 +330,61 @@
         <div class="faq-question">Wat is inbegrepen in de ritprijs?</div>
         <div class="faq-answer">De ritprijs omvat de kosten voor de chauffeur, het voertuig en de reis zelf. Eventuele extra kosten zoals tolwegen of parkeergelden worden vooraf gecommuniceerd en in rekening gebracht.</div>
     </div>
-</section>
-
-<section id="gallery" class="service-section">
-    <h2>Galerij</h2>
-    <div class="gallery">
-        <img src="https://via.placeholder.com/200" alt="Chauffeur Service 1">
-        <img src="https://via.placeholder.com/200" alt="Chauffeur Service 2">
-        <img src="https://via.placeholder.com/200" alt="Chauffeur Service 3">
-        <img src="https://via.placeholder.com/200" alt="Chauffeur Service 4">
+    <div class="faq">
+        <div class="faq-question">Zijn er extra kosten voor lange ritten of speciale verzoeken?</div>
+        <div class="faq-answer">Voor langere ritten of speciale verzoeken, zoals meerdere stops of het meenemen van extra bagage, kunnen extra kosten in rekening worden gebracht. Deze worden altijd vooraf gecommuniceerd.</div>
+    </div>
+    <div class="faq">
+        <div class="faq-question">Wat als ik mijn chauffeur niet kan vinden?</div>
+        <div class="faq-answer">Als u uw chauffeur niet kunt vinden, neem dan direct contact met ons op via Whatsapp. We helpen u snel verder en zorgen ervoor dat u uw chauffeur kunt bereiken.</div>
+    </div>
+    <div class="faq">
+        <div class="faq-question">Kan ik mijn rit delen met anderen?</div>
+        <div class="faq-answer">Onze service biedt de mogelijkheid om ritten te delen met andere passagiers, afhankelijk van beschikbaarheid. Dit kan een kosteneffectieve optie zijn, vooral voor lange ritten.</div>
+    </div>
+    <div class="faq">
+        <div class="faq-question">Hoe veilig zijn de voertuigen?</div>
+        <div class="faq-answer">Onze voertuigen worden regelmatig gecontroleerd en onderhouden om te voldoen aan de hoogste veiligheidsnormen. We zorgen ervoor dat alles in perfecte staat is voor uw rit.</div>
+    </div>
+    <div class="faq">
+        <div class="faq-question">Kan ik een chauffeur voor een langere periode reserveren?</div>
+        <div class="faq-answer">Ja, het is mogelijk om een chauffeur voor een langere periode te reserveren, bijvoorbeeld voor een hele dag of meerdere dagen. Neem contact op voor meer informatie en reserveringen.</div>
     </div>
 </section>
 
-<section id="blog" class="blog-section">
-    <h2>Onze Laatste Blogs</h2>
-    <div class="blog-post">
-        <h3>Waarom Kies je voor een Privé Chauffeur?</h3>
-        <p>Ontdek de vele voordelen van het inhuren van een privé chauffeur voor al uw vervoerbehoeften. Van comfort tot tijdsbesparing, lees meer in onze blog!</p>
-        <a href="#">Lees meer...</a>
-    </div>
-    <div class="blog-post">
-        <h3>5 Tips voor een Stressvrije Reis</h3>
-        <p>Reizen kan stressvol zijn. Hier zijn 5 tips om ervoor te zorgen dat uw reis soepel en aangenaam verloopt.</p>
-        <a href="#">Lees meer...</a>
-    </div>
+<section id="location" class="service-section">
+    <h2>Locatie</h2>
+    <p class="service-description">Ons kantoor is gevestigd in Breda. Wij zijn beschikbaar voor ritten in de hele regio en daarbuiten. Neem contact met ons op voor meer informatie over onze diensten en beschikbaarheid.</p>
 </section>
 
-<section id="calendar" class="service-section">
-    <h2>Boek Nu</h2>
-    <div class="calendar">
-        <p>Kies een datum en tijd om uw rit te boeken:</p>
-        <input type="date" id="booking-date">
-        <input type="time" id="booking-time">
-        <button class="whatsapp-btn" onclick="alert('Boeking voltooid!')">Boek Rit</button>
-    </div>
+<section id="contact" class="service-section">
+    <h2>Contact</h2>
+    <p class="service-description">Neem contact met ons op voor meer informatie of om een boeking te maken.</p>
+    <form class="contact-form" action="https://formspree.io/f/mvggvbjj" method="POST">
+        <label for="name">Naam:</label>
+        <input type="text" id="name" name="name" required>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <label for="message">Bericht:</label>
+        <textarea id="message" name="message" required></textarea>
+        <input type="submit" value="Verzenden">
+    </form>
+</section>
+
+<section class="feature-section">
+    <h2>Waarom Kiezen voor Ons?</h2>
+    <ul>
+        <li><i class="fas fa-check"></i> Ervaren en professionele chauffeurs</li>
+        <li><i class="fas fa-check"></i> Luxe voertuigen uitgerust met moderne voorzieningen</li>
+        <li><i class="fas fa-check"></i> 24/7 beschikbaarheid</li>
+        <li><i class="fas fa-check"></i> Klantgerichte service</li>
+    </ul>
+</section>
+
+<section class="cta-section">
+    <h2>Boek Nu en Ervaar het Verschil!</h2>
+    <p>Neem vandaag nog contact met ons op voor een vrijblijvende offerte!</p>
+    <a href="https://wa.me/31657951523" class="whatsapp-btn" target="_blank">Neem contact op via WhatsApp</a>
 </section>
 
 <footer>
@@ -409,10 +393,8 @@
     <a href="#services">Diensten</a>
     <a href="#reviews">Recensies</a>
     <a href="#faq">FAQ</a>
-    <a href="#gallery">Galerij</a>
-    <a href="#blog">Blog</a>
     <a href="#contact">Contact</a>
-    <a href="#calendar">Boek Nu</a>
+    <a href="#location">Locatie</a>
 </footer>
 
 <div id="google_translate_element"></div>
